@@ -15,11 +15,10 @@ CHALLENGE
 
 // create a variable to store glitched password string
 let glitchedPassword =
-  "This password you set should no be used because it glitches the system.";
+  "This password you set should not be used because it glitches the system.";
 
 // make function with params of password and usersInput
 function checkPassword(password, usersInput) {
-  
   // conditional statement if the password and user's inputed password are the same, log out "Access Granted!"
   if (password === usersInput) {
     return console.log("Access Granted!");
@@ -42,5 +41,17 @@ function checkPassword(password, usersInput) {
   }
 }
 
-// Checks to see if the function runs correctly
+checkPassword("hello", "hello");
+// logs Access Granted!
+
+checkPassword("hello", "forgot");
+// logs Here is a hint: This password you set should not be used because it glitches the system.
+
+checkPassword("hello", "reset");
+// logs Let's reset your account: This password you set should not be used because it glitches the system.
+
+checkPassword("hello", "two");
+// logs Your password is too short!
+
 checkPassword("hello", "doodle");
+//logs Access Denied!
